@@ -70,4 +70,4 @@ Backbone.LinkedCollection = (function (Backbone,_) {
 
 	return LinkedCollection;
 
-}(Backbone,_));
+})(Backbone,_);
