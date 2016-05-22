@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 		/* Distribution */
 		concat: {
 			dist: {
-				src: ['lib/RFC5988-parser.js', 'src/Backbone.LinkedCollection.js'],
+				src: ['lib/RFC5988-parser.js', 'src/backbone.linkedcollection.js'],
 				dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.js',
 				separated: ';'
 			}
