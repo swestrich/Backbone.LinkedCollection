@@ -38,7 +38,10 @@ Backbone.LinkedCollection = (function(Backbone, _) {
 			options.success = function(resp, status, xhr) {
 				var method = options.reset ? 'reset' : 'set';
 				var link = xhr.getResponseHeader('Link');
-				if (link) collection.link = Backbone.parse(link);
+				if (link) {
+					console.log(link);
+					collection.link = link;
+				}
 				collection[method](resp, options);
 				if (success) success(collection, resp, options);
 				collection.trigger('sync', collection, resp, options);
