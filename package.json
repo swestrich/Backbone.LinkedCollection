@@ -14,14 +14,14 @@
 	},
 
 	"main": "index",
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "https://github.com/swestrich/Backbone.LinkedCollection/LICENSE"
-		}
-	],
-
+	"licenses": [{
+		"type": "MIT",
+		"url": "https://github.com/swestrich/Backbone.LinkedCollection/LICENSE"
+	}],
 	"devDependencies": {
 		"grunt-contrib": "*"
+	},
+	"dependencies": {
+		"parse-link-header": "^0.4.1"
 	}
 }

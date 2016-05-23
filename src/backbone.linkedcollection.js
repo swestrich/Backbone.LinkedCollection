@@ -11,6 +11,8 @@
  * - next
  * - last
  */
+ var parser = require("parse-link-header");
+ 
 Backbone.LinkedCollection = (function(Backbone, _) {
 
 	// No need to trash our collection prototype with yet another property.
@@ -39,8 +41,7 @@ Backbone.LinkedCollection = (function(Backbone, _) {
 				var method = options.reset ? 'reset' : 'set';
 				var link = xhr.getResponseHeader('Link');
 				if (link) {
-					console.log(link);
-					collection.link = link;
+					collection.link = parser(link);
 				}
 				collection[method](resp, options);
 				if (success) success(collection, resp, options);
